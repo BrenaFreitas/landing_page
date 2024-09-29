@@ -1,0 +1,214 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+    padding: 0;
+    margin: 0;
+}
+
+header {
+    background-color: #07004c;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+nav ul{
+    padding: 0;
+    list-style: none;
+}
+
+nav ul li{
+    display: inline;
+    margin-right: 10px;
+}
+
+nav ul li a {
+    color: #ca36ec;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+nav ul li:hover {
+    text-decoration: underline;
+}
+
+
+main {
+    margin: 20px;
+}
+
+#carrosselContainer {
+    position: relative;
+    width: 100%;
+    margin :0 auto;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    
+}
+
+#informacoesContent, #informacoesParcerias {
+    margin-top: 100px ;
+    text-align: center;
+}
+
+#informacoesContainer, #parceriasContainer {
+    display: flex; /* Alinha os itens lado a lado */
+    justify-content: space-between; /* Espaçamento entre os itens */
+    gap: 20px; /* Espaço entre as divs */
+    padding: 20px; /* Padding opcional */
+}
+
+/* Estilizando cada div de informações */
+.informacoes, .imagemParcerias {
+    flex: 1; 
+    text-align: center; 
+    border: 1px solid #ccc; 
+    padding: 10px;
+    height: 40vh;
+}
+
+.imagemParcerias{
+    margin-top: 30px;
+}
+
+
+#app {
+    text-align: center;
+    background-color: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 90vw;
+    height: 60vh;
+    margin-top: 2.5rem ;
+
+}
+
+#app p {
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+footer {
+    margin-top: 20px;
+    height: 100vh;
+}
+
+footer p {
+    margin: 0;
+}
+
+footer .footerContainer{
+    background-color: white;
+    color: black;
+    padding: 0 30px 30px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100vh;
+}
+
+footer .footerLogo{
+    flex: 1;
+    padding: 10px;
+}
+
+.footerLogo:not(:first-child) {
+    border-left: 2px solid #ccc; 
+    padding-left: 20px;
+    height: 50%;
+}
+
+footer .footerCopyright{
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    font-size: 14px;
+
+}
+footer .footerCopyright a{
+    margin: 0;
+}
+
+footer .formContato {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+
+}
+
+footer .formContato input{
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    margin-top: 5px;
+
+}
+
+footer .formContato button{
+    background-color: #07004c;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/* Botões de navegação */
+button.prev, button.next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 18px;
+    z-index: 1;
+}
+
+button.prev {
+    left: 10px;
+}
+
+button.next {
+    right: 10px;
+}
+
+button.prev:hover, button.next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+
+@media (max-width: 768px) {
+    nav ul li{
+        display: block;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+    #app {
+        padding: 20px;
+    }
+
+    #container {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+}
